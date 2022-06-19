@@ -4,6 +4,8 @@
  */
 package proyecto_ufi.g2;
 
+import vistas.JF_inicioSesion;
+
 /**
  *
  * @author Derek
@@ -15,6 +17,8 @@ public class main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        JF_inicioSesion JFIS = new JF_inicioSesion();
+        JFIS.setVisible(true);
     }
     
 }
