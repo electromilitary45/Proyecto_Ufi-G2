@@ -14,7 +14,8 @@ import proyecto_ufi.g2.cls_metodos;
 public class JF_inicioSesion extends javax.swing.JFrame {
     cls_metodos clsM = new cls_metodos();
     
-    @Override
+    
+    
     public void setBounds(int x, int y, int width, int height) {
         super.setBounds(750, 400, width, height);
     }
@@ -145,7 +146,8 @@ public class JF_inicioSesion extends javax.swing.JFrame {
 
     private void btn_salirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_salirMouseClicked
         // TODO add your handling code here:
-        dispose();
+        System.exit(0);//cierra el programa por completo
+        
     }//GEN-LAST:event_btn_salirMouseClicked
 
     private void btn_inicioSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inicioSesionActionPerformed
@@ -169,9 +171,12 @@ public class JF_inicioSesion extends javax.swing.JFrame {
     private void btn_inicioSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_inicioSesionMouseClicked
         // TODO add your handling code here:
         if(clsM.inicioSesion()==true){
-            dispose();
-            
-            JOptionPane.showMessageDialog(null, "ENTRE");
+            dispose();//cierra la vista pero no termina el programa
+            JF_menu JFM = new JF_menu();
+            JFM.setVisible(true);
+            JOptionPane.showMessageDialog(null, "Bienvenido");
+        }else{
+            clsM.limpiarInicioSesion();//limpia espacios con el metodo
         }
     }//GEN-LAST:event_btn_inicioSesionMouseClicked
 
@@ -201,7 +206,7 @@ public class JF_inicioSesion extends javax.swing.JFrame {
 
     private void jtf_userPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jtf_userPropertyChange
         // TODO add your handling code here:
-        jtf_user.setText("");
+        //jtf_user.setText("");
     }//GEN-LAST:event_jtf_userPropertyChange
 
     private void btn_inicioSesionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_inicioSesionKeyPressed
