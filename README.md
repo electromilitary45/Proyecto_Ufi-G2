@@ -5,7 +5,7 @@
 <li>🐶 Derek Sebastian Leiva Villalobos</li>
 <li>🦊 </li>
 <li>🐼 </li>
-<li>🦄 </li>
+<li>🦄 Nicol Madrigal Vargas</li>
 
 <h1></h1>
 
