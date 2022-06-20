@@ -6,6 +6,7 @@
 <li>🦊 </li>
 <li>🐼 </li>
 <li>🦄 Nicole Madrigal Vargas</li>
+<li>🐻</li>
 
 <h1></h1>
 
