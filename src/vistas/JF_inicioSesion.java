@@ -45,7 +45,7 @@ public class JF_inicioSesion extends javax.swing.JFrame {
         jpf_pass = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.GridLayout());
+        getContentPane().setLayout(new java.awt.GridLayout(1, 0));
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -66,7 +66,7 @@ public class JF_inicioSesion extends javax.swing.JFrame {
                 btn_inicioSesionKeyPressed(evt);
             }
         });
-        jPanel1.add(btn_inicioSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, -1, -1));
+        jPanel1.add(btn_inicioSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, -1, -1));
 
         btn_salir.setText("SALIR");
         btn_salir.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -117,10 +117,10 @@ public class JF_inicioSesion extends javax.swing.JFrame {
                 jtf_userKeyTyped(evt);
             }
         });
-        jPanel1.add(jtf_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 250, 30));
+        jPanel1.add(jtf_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 250, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logohotelguarco.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 360, 130));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/hotel-dummy.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 310, 200));
 
         jpf_pass.setText("********");
         jpf_pass.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -133,7 +133,7 @@ public class JF_inicioSesion extends javax.swing.JFrame {
                 jpf_passMouseClicked(evt);
             }
         });
-        jPanel1.add(jpf_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 250, 30));
+        jPanel1.add(jpf_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 250, 30));
 
         getContentPane().add(jPanel1);
 
@@ -172,9 +172,11 @@ public class JF_inicioSesion extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(clsM.inicioSesion()==true){
             dispose();//cierra la vista pero no termina el programa
+            //----Intancia interfaz Menu----
             JF_menu JFM = new JF_menu();
-            JFM.setVisible(true);
-            JOptionPane.showMessageDialog(null, "Bienvenido");
+            JFM.setVisible(true);//abre menu
+            JOptionPane.showMessageDialog(null, "Bienvenido");//mensaje bienvenido
+            
         }else{
             clsM.limpiarInicioSesion();//limpia espacios con el metodo
         }
