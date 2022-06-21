@@ -68,6 +68,7 @@ public class cls_metodos {
                 
             }/*else if(){
             }*///aqui debe ir una conducion p para que en caso de quue todos los dato 
+            
         }
         
         
