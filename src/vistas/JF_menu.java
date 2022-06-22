@@ -65,12 +65,6 @@ public class JF_menu extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jTextField2 = new javax.swing.JTextField();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
-        jTextField3 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         btn_salir = new javax.swing.JMenu();
         btn_cerrarSesion = new javax.swing.JMenu();
@@ -303,73 +297,6 @@ public class JF_menu extends javax.swing.JFrame {
 
         CONTENEDOR.addTab("Editar", PAGINA3);
 
-        jPanel5.setBackground(new java.awt.Color(153, 204, 255));
-
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane4.setViewportView(jTable3);
-
-        jTextField3.setText("jTextField3");
-
-        jButton2.setText("BORRAR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(234, Short.MAX_VALUE))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(39, 39, 39))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17))
-        );
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        CONTENEDOR.addTab("Eliminar", jPanel4);
-
         btn_salir.setText("SALIR");
         btn_salir.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -422,43 +349,38 @@ public class JF_menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_salirMouseEntered
 
-    private void btn_limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_limpiarActionPerformed
+    private void jtf_numPersonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_numPersonaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_limpiarActionPerformed
-
-    private void btn_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_agregarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_agregarActionPerformed
-
-    private void jtf_nomPersonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_nomPersonaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtf_nomPersonaActionPerformed
-
-    private void jtf_fechaEnt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_fechaEnt1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtf_fechaEnt1ActionPerformed
-
-    private void jtf_fechaSalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_fechaSalActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtf_fechaSalActionPerformed
+    }//GEN-LAST:event_jtf_numPersonaActionPerformed
 
     private void jtf_idPersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_idPersActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtf_idPersActionPerformed
 
-    private void jtf_numPersonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_numPersonaActionPerformed
+    private void jtf_fechaSalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_fechaSalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtf_numPersonaActionPerformed
+    }//GEN-LAST:event_jtf_fechaSalActionPerformed
+
+    private void jtf_fechaEnt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_fechaEnt1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtf_fechaEnt1ActionPerformed
+
+    private void btn_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_agregarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_agregarActionPerformed
 
     private void btn_agregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_agregarMouseClicked
         // TODO add your handling code here:
         clsM.creacionReserva();
-        
     }//GEN-LAST:event_btn_agregarMouseClicked
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jtf_nomPersonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_nomPersonaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jtf_nomPersonaActionPerformed
+
+    private void btn_limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_limpiarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_limpiarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -506,7 +428,6 @@ public class JF_menu extends javax.swing.JFrame {
     public static javax.swing.JButton btn_limpiar;
     private javax.swing.JMenu btn_salir;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -520,19 +441,14 @@ public class JF_menu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextArea jta_respuesta;
+    public static javax.swing.JTextArea jta_respuesta;
     public static javax.swing.JTextField jtf_correoPers;
     public static javax.swing.JTextField jtf_fechaEnt1;
     public static javax.swing.JTextField jtf_fechaSal;
