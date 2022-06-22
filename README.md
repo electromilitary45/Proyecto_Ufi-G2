@@ -1,5 +1,7 @@
 <h1>Proyecto UFidelitas 🖥️</h1>
-<h3>Temas:  🚧</h3>
+<h3>Tema:  🛏️ Reservaciones para Hotel</h3>
+<h3>Profesor: Steven Blanco</3>
+##
 <h3>Proyecto Cuatrimestre #2 2022 🧿</h3>
 <h3>Estudiantes: </h3>
 <li>🐶 Derek Sebastian Leiva Villalobos</li>
