@@ -43,15 +43,15 @@ public class JF_menu extends javax.swing.JFrame {
         PAGINA2 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         btn_limpiar = new javax.swing.JButton();
-        jtf_correoPers = new javax.swing.JTextField();
+        jtf_correoPersona = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jtf_nomPersona = new javax.swing.JTextField();
+        jtf_nombrePersona = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         btn_agregar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jta_respuesta = new javax.swing.JTextArea();
-        jtf_fechaEnt1 = new javax.swing.JTextField();
+        jtf_entradaPersona = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jtf_fechaSal = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
@@ -62,9 +62,21 @@ public class JF_menu extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         PAGINA3 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
-        jTextField2 = new javax.swing.JTextField();
+        bth_LimpiarVeditar = new javax.swing.JButton();
+        bth_EditarVeditar = new javax.swing.JButton();
+        bth_BuscarVeditar = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jtf_corre = new javax.swing.JLabel();
+        jtf_entradaEditar = new javax.swing.JLabel();
+        jtf_salidaEditar = new javax.swing.JLabel();
+        jtf_cedulaEditar = new javax.swing.JLabel();
+        jtf_entraEdit = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jtf_nomEdit = new javax.swing.JTextField();
+        jtf_correoEdit = new javax.swing.JTextField();
+        jtf_salidaEdit = new javax.swing.JTextField();
+        jtf_cedEditar = new javax.swing.JTextField();
+        jtf_telfEditar = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         btn_salir = new javax.swing.JMenu();
         btn_cerrarSesion = new javax.swing.JMenu();
@@ -74,6 +86,8 @@ public class JF_menu extends javax.swing.JFrame {
         jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        CONTENEDOR.setBackground(new java.awt.Color(204, 204, 204));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 204));
 
@@ -108,7 +122,7 @@ public class JF_menu extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(59, 59, 59)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50))
         );
@@ -136,27 +150,24 @@ public class JF_menu extends javax.swing.JFrame {
             }
         });
         jPanel2.add(btn_limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 260, 100, 30));
-        jPanel2.add(jtf_correoPers, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 270, 40));
+        jPanel2.add(jtf_correoPersona, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 270, 40));
 
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Nombre de la persona:");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
 
-        jtf_nomPersona.addActionListener(new java.awt.event.ActionListener() {
+        jtf_nombrePersona.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtf_nomPersonaActionPerformed(evt);
+                jtf_nombrePersonaActionPerformed(evt);
             }
         });
-        jPanel2.add(jtf_nomPersona, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 270, 40));
+        jPanel2.add(jtf_nombrePersona, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 270, 40));
 
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Correo de la persona:");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Fecha de entrada:");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
 
@@ -179,15 +190,14 @@ public class JF_menu extends javax.swing.JFrame {
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, -1, -1));
 
-        jtf_fechaEnt1.addActionListener(new java.awt.event.ActionListener() {
+        jtf_entradaPersona.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtf_fechaEnt1ActionPerformed(evt);
+                jtf_entradaPersonaActionPerformed(evt);
             }
         });
-        jPanel2.add(jtf_fechaEnt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 270, 40));
+        jPanel2.add(jtf_entradaPersona, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 270, 40));
 
         jLabel4.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Fecha de entrada:");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
 
@@ -199,7 +209,6 @@ public class JF_menu extends javax.swing.JFrame {
         jPanel2.add(jtf_fechaSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 270, 40));
 
         jLabel5.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Fecha Salida:");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
 
@@ -211,12 +220,10 @@ public class JF_menu extends javax.swing.JFrame {
         jPanel2.add(jtf_idPers, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 270, 40));
 
         jLabel6.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Cedula de persona:");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Numero telefonico Persona:");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, -1, -1));
 
@@ -243,45 +250,128 @@ public class JF_menu extends javax.swing.JFrame {
 
         CONTENEDOR.addTab("Agregar", PAGINA2);
 
-        jPanel3.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel3.setBackground(new java.awt.Color(51, 51, 51));
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane3.setViewportView(jTable2);
+        bth_LimpiarVeditar.setBackground(new java.awt.Color(153, 255, 153));
+        bth_LimpiarVeditar.setText("Limpiar");
 
-        jTextField2.setText("jTextField2");
+        bth_EditarVeditar.setBackground(new java.awt.Color(204, 255, 204));
+        bth_EditarVeditar.setText("Editar");
+
+        bth_BuscarVeditar.setBackground(new java.awt.Color(0, 255, 153));
+        bth_BuscarVeditar.setText("Buscar");
+
+        jLabel8.setFont(new java.awt.Font("Gabriola", 0, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Nombre de la persona:");
+
+        jtf_corre.setFont(new java.awt.Font("Gabriola", 0, 24)); // NOI18N
+        jtf_corre.setForeground(new java.awt.Color(255, 255, 255));
+        jtf_corre.setText("Correo de la persona:");
+
+        jtf_entradaEditar.setFont(new java.awt.Font("Gabriola", 0, 24)); // NOI18N
+        jtf_entradaEditar.setForeground(new java.awt.Color(255, 255, 255));
+        jtf_entradaEditar.setText("Fecha de entrada:");
+
+        jtf_salidaEditar.setFont(new java.awt.Font("Gabriola", 0, 24)); // NOI18N
+        jtf_salidaEditar.setForeground(new java.awt.Color(255, 255, 255));
+        jtf_salidaEditar.setText("Fecha Salida:");
+
+        jtf_cedulaEditar.setFont(new java.awt.Font("Gabriola", 0, 24)); // NOI18N
+        jtf_cedulaEditar.setForeground(new java.awt.Color(255, 255, 255));
+        jtf_cedulaEditar.setText("Cedula de persona:");
+
+        jtf_entraEdit.setBackground(new java.awt.Color(153, 255, 51));
+
+        jLabel13.setFont(new java.awt.Font("Gabriola", 0, 24)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Numero telefonico Persona:");
+
+        jtf_nomEdit.setBackground(new java.awt.Color(153, 255, 0));
+
+        jtf_correoEdit.setBackground(new java.awt.Color(153, 255, 51));
+
+        jtf_salidaEdit.setBackground(new java.awt.Color(153, 255, 51));
+
+        jtf_cedEditar.setBackground(new java.awt.Color(153, 255, 0));
+
+        jtf_telfEditar.setBackground(new java.awt.Color(153, 255, 0));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jtf_cedulaEditar)
+                        .addGap(111, 111, 111))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtf_salidaEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtf_nomEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtf_correoEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtf_salidaEditar)
+                            .addComponent(jtf_entraEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(92, 92, 92)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jtf_telfEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(bth_LimpiarVeditar, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(bth_BuscarVeditar, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(bth_EditarVeditar, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(23, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(jLabel13))
+                                    .addComponent(jtf_cedEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(23, 23, 23))))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(233, Short.MAX_VALUE))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtf_entradaEditar)
+                            .addComponent(jtf_corre))
+                        .addContainerGap())))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 180, Short.MAX_VALUE)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(43, 43, 43)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtf_cedulaEditar)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jtf_cedEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtf_nomEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtf_corre)
+                    .addComponent(jLabel13))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jtf_telfEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtf_correoEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jtf_entradaEditar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtf_entraEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bth_EditarVeditar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtf_salidaEditar)
+                    .addComponent(bth_LimpiarVeditar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtf_salidaEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bth_BuscarVeditar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout PAGINA3Layout = new javax.swing.GroupLayout(PAGINA3);
@@ -326,7 +416,10 @@ public class JF_menu extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(CONTENEDOR)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(CONTENEDOR)
+                .addContainerGap())
         );
 
         pack();
@@ -361,9 +454,9 @@ public class JF_menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtf_fechaSalActionPerformed
 
-    private void jtf_fechaEnt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_fechaEnt1ActionPerformed
+    private void jtf_entradaPersonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_entradaPersonaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtf_fechaEnt1ActionPerformed
+    }//GEN-LAST:event_jtf_entradaPersonaActionPerformed
 
     private void btn_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_agregarActionPerformed
         // TODO add your handling code here:
@@ -374,9 +467,9 @@ public class JF_menu extends javax.swing.JFrame {
         clsM.creacionReserva();
     }//GEN-LAST:event_btn_agregarMouseClicked
 
-    private void jtf_nomPersonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_nomPersonaActionPerformed
+    private void jtf_nombrePersonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_nombrePersonaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtf_nomPersonaActionPerformed
+    }//GEN-LAST:event_jtf_nombrePersonaActionPerformed
 
     private void btn_limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_limpiarActionPerformed
         // TODO add your handling code here:
@@ -423,6 +516,9 @@ public class JF_menu extends javax.swing.JFrame {
     private javax.swing.JPanel PAGINA2;
     private javax.swing.JPanel PAGINA3;
     private javax.swing.JPanel Pagina1;
+    public static javax.swing.JButton bth_BuscarVeditar;
+    public static javax.swing.JButton bth_EditarVeditar;
+    public static javax.swing.JButton bth_LimpiarVeditar;
     public static javax.swing.JButton btn_agregar;
     private javax.swing.JMenu btn_cerrarSesion;
     public static javax.swing.JButton btn_limpiar;
@@ -430,12 +526,14 @@ public class JF_menu extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
@@ -443,17 +541,24 @@ public class JF_menu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     public static javax.swing.JTextArea jta_respuesta;
-    public static javax.swing.JTextField jtf_correoPers;
-    public static javax.swing.JTextField jtf_fechaEnt1;
+    public static javax.swing.JTextField jtf_cedEditar;
+    public static javax.swing.JLabel jtf_cedulaEditar;
+    public static javax.swing.JLabel jtf_corre;
+    public static javax.swing.JTextField jtf_correoEdit;
+    public static javax.swing.JTextField jtf_correoPersona;
+    public static javax.swing.JTextField jtf_entraEdit;
+    public static javax.swing.JLabel jtf_entradaEditar;
+    public static javax.swing.JTextField jtf_entradaPersona;
     public static javax.swing.JTextField jtf_fechaSal;
     public static javax.swing.JTextField jtf_idPers;
-    public static javax.swing.JTextField jtf_nomPersona;
+    public static javax.swing.JTextField jtf_nomEdit;
+    public static javax.swing.JTextField jtf_nombrePersona;
     public static javax.swing.JTextField jtf_numPersona;
+    public static javax.swing.JTextField jtf_salidaEdit;
+    public static javax.swing.JLabel jtf_salidaEditar;
+    public static javax.swing.JTextField jtf_telfEditar;
     // End of variables declaration//GEN-END:variables
 }

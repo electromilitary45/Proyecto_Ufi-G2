@@ -44,16 +44,16 @@ public class cls_metodos {
         String nombre="",correo="",fechaEnt="",fechaSal="",id="",numeroTel="";
         
         
-        nombre=JF_menu.jtf_nomPersona.getText();
-        correo=JF_menu.jtf_correoPers.getText();
-        fechaEnt=JF_menu.jtf_fechaEnt1.getText();
+        nombre=JF_menu.jtf_nombrePersona.getText();
+        correo=JF_menu.jtf_correoPersona.getText();
+        fechaEnt=JF_menu.jtf_entradaPersona.getText();
         id=JF_menu.jtf_idPers.getText();
         numeroTel=JF_menu.jtf_numPersona.getText();
         
         //id= clsF.numero(JF_menu.jtf_idPers.getText());
         
-        if(JF_menu.jtf_correoPers.getText().isEmpty() || JF_menu.jtf_fechaEnt1.getText().isEmpty() || JF_menu.jtf_fechaSal.getText().isEmpty() || JF_menu.jtf_idPers.getText().isEmpty() || 
-                JF_menu.jtf_nomPersona.getText().isEmpty() || JF_menu.jtf_numPersona.getText().isEmpty()){
+        if(JF_menu.jtf_correoPersona.getText().isEmpty() || JF_menu.jtf_entradaPersona.getText().isEmpty() || JF_menu.jtf_fechaSal.getText().isEmpty() || JF_menu.jtf_idPers.getText().isEmpty() || 
+                JF_menu.jtf_nombrePersona.getText().isEmpty() || JF_menu.jtf_numPersona.getText().isEmpty()){
             JOptionPane.showMessageDialog(null, "Debe rellenar todos los espacios");
         }else{//entra a este else porque ningun espacio esta vacio
             if(id.length() != 9){
