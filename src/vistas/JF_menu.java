@@ -39,7 +39,12 @@ public class JF_menu extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jTextField1 = new javax.swing.JTextField();
+        jtf_Nombre = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jtf_numero = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        btn_busca = new javax.swing.JButton();
+        btn_eliminar = new javax.swing.JButton();
         PAGINA2 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         btn_limpiar = new javax.swing.JButton();
@@ -59,7 +64,7 @@ public class JF_menu extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jtf_numPersona = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBox1 = new javax.swing.JComboBox<String>();
         PAGINA3 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         bth_LimpiarVeditar = new javax.swing.JButton();
@@ -104,27 +109,85 @@ public class JF_menu extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable1);
 
-        jTextField1.setText("jTextField1");
+        jtf_Nombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtf_NombreActionPerformed(evt);
+            }
+        });
+
+        jLabel9.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel9.setText("Nombre de la persona:");
+
+        jLabel10.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel10.setText("Numero telefonico:");
+
+        btn_busca.setText("Buscar");
+        btn_busca.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_buscaMouseClicked(evt);
+            }
+        });
+        btn_busca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_buscaActionPerformed(evt);
+            }
+        });
+
+        btn_eliminar.setText("Eliminar");
+        btn_eliminar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_eliminarMouseClicked(evt);
+            }
+        });
+        btn_eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_eliminarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(241, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel9))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtf_numero, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtf_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(112, 112, 112)
+                        .addComponent(btn_busca, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(137, 137, 137)
+                        .addComponent(btn_eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 497, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addGap(23, 23, 23)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(jtf_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(jtf_numero, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_busca, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50))
+                .addGap(25, 25, 25))
         );
 
         javax.swing.GroupLayout Pagina1Layout = new javax.swing.GroupLayout(Pagina1);
@@ -234,7 +297,7 @@ public class JF_menu extends javax.swing.JFrame {
         });
         jPanel2.add(jtf_numPersona, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, 270, 40));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<String>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, 270, 40));
 
         javax.swing.GroupLayout PAGINA2Layout = new javax.swing.GroupLayout(PAGINA2);
@@ -371,7 +434,7 @@ public class JF_menu extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jtf_salidaEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bth_BuscarVeditar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout PAGINA3Layout = new javax.swing.GroupLayout(PAGINA3);
@@ -475,6 +538,26 @@ public class JF_menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_limpiarActionPerformed
 
+    private void jtf_NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_NombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtf_NombreActionPerformed
+
+    private void btn_buscaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_buscaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_buscaMouseClicked
+
+    private void btn_buscaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_buscaActionPerformed
+
+    private void btn_eliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_eliminarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_eliminarMouseClicked
+
+    private void btn_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_eliminarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_eliminarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -520,12 +603,15 @@ public class JF_menu extends javax.swing.JFrame {
     public static javax.swing.JButton bth_EditarVeditar;
     public static javax.swing.JButton bth_LimpiarVeditar;
     public static javax.swing.JButton btn_agregar;
+    public static javax.swing.JButton btn_busca;
     private javax.swing.JMenu btn_cerrarSesion;
+    public static javax.swing.JButton btn_eliminar;
     public static javax.swing.JButton btn_limpiar;
     private javax.swing.JMenu btn_salir;
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -534,6 +620,7 @@ public class JF_menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
@@ -542,8 +629,8 @@ public class JF_menu extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
     public static javax.swing.JTextArea jta_respuesta;
+    private javax.swing.JTextField jtf_Nombre;
     public static javax.swing.JTextField jtf_cedEditar;
     public static javax.swing.JLabel jtf_cedulaEditar;
     public static javax.swing.JLabel jtf_corre;
@@ -557,6 +644,7 @@ public class JF_menu extends javax.swing.JFrame {
     public static javax.swing.JTextField jtf_nomEdit;
     public static javax.swing.JTextField jtf_nombrePersona;
     public static javax.swing.JTextField jtf_numPersona;
+    private javax.swing.JTextField jtf_numero;
     public static javax.swing.JTextField jtf_salidaEdit;
     public static javax.swing.JLabel jtf_salidaEditar;
     public static javax.swing.JTextField jtf_telfEditar;
