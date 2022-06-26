@@ -23,10 +23,10 @@ public class cls_metodos {
         String user="admin",pass="admin";
         
         //----------PROCESO INICIO SESION------------------
-        if(JF_inicioSesion.jtf_user.getText().isEmpty() ||JF_inicioSesion.jpf_pass.getText().isEmpty() ){ //Si los espacios estan vacios manda un mensaje para que rellene los campos
+        if(JF_inicioSesion.jtf_user.getText().isEmpty() || String.valueOf(JF_inicioSesion.jpf_pass.getPassword()).isEmpty() ){ //Si los espacios estan vacios manda un mensaje para que rellene los campos
             JOptionPane.showMessageDialog(null, "Debe rellenar los espacios"); //mensaje
             ini=false;
-        }else if(JF_inicioSesion.jtf_user.getText().equals(user) && JF_inicioSesion.jpf_pass.getText().equals(pass)){//Si los espacios son iguales a las variables 'user' y 'pass' entonces 
+        }else if(JF_inicioSesion.jtf_user.getText().equals(user) && String.valueOf(JF_inicioSesion.jpf_pass.getPassword()).equals(pass)){//Si los espacios son iguales a las variables 'user' y 'pass' entonces 
             ini=true; //la varable 'ini' se convierte en true para avisar al JF que los las credenciales son correctas
         }else{
             JOptionPane.showMessageDialog(null, "Credenciales incorrectas");
