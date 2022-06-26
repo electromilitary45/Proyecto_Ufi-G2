@@ -41,36 +41,21 @@ public class JF_inicioSesion extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btn_inicioSesion = new javax.swing.JButton();
-        btn_salir = new javax.swing.JButton();
         jtf_user = new javax.swing.JTextField();
         jpf_pass = new javax.swing.JPasswordField();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        btn_salir_JFInicio = new javax.swing.JLabel();
+        btn_login = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btn_inicioSesion.setText("INICIAR SESION");
-        btn_inicioSesion.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btn_inicioSesionMouseClicked(evt);
-            }
-        });
-        jPanel1.add(btn_inicioSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, 130, -1));
-
-        btn_salir.setText("SALIR");
-        btn_salir.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btn_salirMouseClicked(evt);
-            }
-        });
-        jPanel1.add(btn_salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, -1, -1));
         jPanel1.add(jtf_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 250, 30));
         jPanel1.add(jpf_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 250, 30));
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
@@ -84,17 +69,33 @@ public class JF_inicioSesion extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/hotel.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
 
+        btn_salir_JFInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cerrar-sesion.png"))); // NOI18N
+        btn_salir_JFInicio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_salir_JFInicioMouseClicked(evt);
+            }
+        });
+        jPanel1.add(btn_salir_JFInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, -1, -1));
+
+        btn_login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iniciar-sesion.png"))); // NOI18N
+        btn_login.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_loginMouseClicked(evt);
+            }
+        });
+        jPanel1.add(btn_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, -1, -1));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 340));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_salirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_salirMouseClicked
+    private void btn_salir_JFInicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_salir_JFInicioMouseClicked
         // TODO add your handling code here:
         System.exit(0);
-    }//GEN-LAST:event_btn_salirMouseClicked
+    }//GEN-LAST:event_btn_salir_JFInicioMouseClicked
 
-    private void btn_inicioSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_inicioSesionMouseClicked
+    private void btn_loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_loginMouseClicked
         // TODO add your handling code here:
         if(clsM.inicioSesion()==true){
             dispose();
@@ -103,7 +104,8 @@ public class JF_inicioSesion extends javax.swing.JFrame {
         }else{
             clsM.limpiarInicioSesion();
         }
-    }//GEN-LAST:event_btn_inicioSesionMouseClicked
+        
+    }//GEN-LAST:event_btn_loginMouseClicked
 
     /**
      * @param args the command line arguments
@@ -141,8 +143,8 @@ public class JF_inicioSesion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public static javax.swing.JButton btn_inicioSesion;
-    public static javax.swing.JButton btn_salir;
+    private javax.swing.JLabel btn_login;
+    private javax.swing.JLabel btn_salir_JFInicio;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
