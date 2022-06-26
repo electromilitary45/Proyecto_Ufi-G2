@@ -44,13 +44,16 @@ public class JF_inicioSesion extends javax.swing.JFrame {
         btn_inicioSesion = new javax.swing.JButton();
         btn_salir = new javax.swing.JButton();
         jtf_user = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
         jpf_pass = new javax.swing.JPasswordField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.GridLayout(1, 0));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(49, 61, 61));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btn_inicioSesion.setText("INICIAR SESION");
@@ -59,17 +62,7 @@ public class JF_inicioSesion extends javax.swing.JFrame {
                 btn_inicioSesionMouseClicked(evt);
             }
         });
-        btn_inicioSesion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_inicioSesionActionPerformed(evt);
-            }
-        });
-        btn_inicioSesion.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                btn_inicioSesionKeyPressed(evt);
-            }
-        });
-        jPanel1.add(btn_inicioSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, -1, -1));
+        jPanel1.add(btn_inicioSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, 130, -1));
 
         btn_salir.setText("SALIR");
         btn_salir.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -77,145 +70,40 @@ public class JF_inicioSesion extends javax.swing.JFrame {
                 btn_salirMouseClicked(evt);
             }
         });
-        btn_salir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_salirActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btn_salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 300, -1, -1));
+        jPanel1.add(btn_salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, -1, -1));
+        jPanel1.add(jtf_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 250, 30));
+        jPanel1.add(jpf_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 250, 30));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
 
-        jtf_user.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jtf_userFocusGained(evt);
-            }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                jtf_userFocusLost(evt);
-            }
-        });
-        jtf_user.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jtf_userMouseClicked(evt);
-            }
-        });
-        jtf_user.addInputMethodListener(new java.awt.event.InputMethodListener() {
-            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
-            }
-            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
-                jtf_userInputMethodTextChanged(evt);
-            }
-        });
-        jtf_user.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtf_userActionPerformed(evt);
-            }
-        });
-        jtf_user.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                jtf_userPropertyChange(evt);
-            }
-        });
-        jtf_user.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jtf_userKeyTyped(evt);
-            }
-        });
-        jPanel1.add(jtf_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 250, 30));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/usuario-de-perfil.png"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/hotel-dummy.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 310, 200));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/contrasena.png"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
 
-        jpf_pass.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                jpf_passFocusGained(evt);
-            }
-        });
-        jpf_pass.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jpf_passMouseClicked(evt);
-            }
-        });
-        jPanel1.add(jpf_pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 250, 30));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/hotel.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
 
-        getContentPane().add(jPanel1);
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 340));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salirActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_salirActionPerformed
-
     private void btn_salirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_salirMouseClicked
         // TODO add your handling code here:
-        System.exit(0);//cierra el programa por completo
-        
+        System.exit(0);
     }//GEN-LAST:event_btn_salirMouseClicked
-
-    private void btn_inicioSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_inicioSesionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_inicioSesionActionPerformed
-
-    private void jtf_userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_userActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtf_userActionPerformed
-
-    private void jtf_userInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jtf_userInputMethodTextChanged
-        // TODO add your handling code here:
-       jtf_user.setText("");
-    }//GEN-LAST:event_jtf_userInputMethodTextChanged
-
-    private void jtf_userMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtf_userMouseClicked
-        // TODO add your handling code here:
-        jtf_user.setText("");
-    }//GEN-LAST:event_jtf_userMouseClicked
 
     private void btn_inicioSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_inicioSesionMouseClicked
         // TODO add your handling code here:
         if(clsM.inicioSesion()==true){
-            dispose();//cierra la vista pero no termina el programa
-            //----Intancia interfaz Menu----
+            dispose();
             JF_menu JFM = new JF_menu();
-            JFM.setVisible(true);//abre menu
-            JOptionPane.showMessageDialog(null, "Bienvenido");//mensaje bienvenido
-            
+            JFM.setVisible(true);
         }else{
-            clsM.limpiarInicioSesion();//limpia espacios con el metodo
+            clsM.limpiarInicioSesion();
         }
     }//GEN-LAST:event_btn_inicioSesionMouseClicked
-
-    private void jpf_passMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpf_passMouseClicked
-        // TODO add your handling code here:
-        jpf_pass.setText("");
-    }//GEN-LAST:event_jpf_passMouseClicked
-
-    private void jpf_passFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jpf_passFocusGained
-        // TODO add your handling code here:
-        jpf_pass.setText("");
-    }//GEN-LAST:event_jpf_passFocusGained
-
-    private void jtf_userFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtf_userFocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtf_userFocusLost
-
-    private void jtf_userFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtf_userFocusGained
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jtf_userFocusGained
-
-    private void jtf_userKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtf_userKeyTyped
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jtf_userKeyTyped
-
-    private void jtf_userPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jtf_userPropertyChange
-        // TODO add your handling code here:
-        //jtf_user.setText("");
-    }//GEN-LAST:event_jtf_userPropertyChange
-
-    private void btn_inicioSesionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btn_inicioSesionKeyPressed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_btn_inicioSesionKeyPressed
 
     /**
      * @param args the command line arguments
@@ -256,6 +144,9 @@ public class JF_inicioSesion extends javax.swing.JFrame {
     public static javax.swing.JButton btn_inicioSesion;
     public static javax.swing.JButton btn_salir;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     public static javax.swing.JPasswordField jpf_pass;
     public static javax.swing.JTextField jtf_user;
