@@ -4,6 +4,7 @@
  */
 package vistas;
 
+import extensiones.TextPrompt;
 import javax.swing.JOptionPane;
 import proyecto_ufi.g2.cls_metodos;
 
@@ -26,6 +27,8 @@ public class JF_inicioSesion extends javax.swing.JFrame {
      */
     public JF_inicioSesion() {
         initComponents();
+        TextPrompt txtPass = new TextPrompt("Digite su contraseña", jpf_pass);
+        TextPrompt txtuser = new TextPrompt("Digite su Usuario",jtf_user);
     }
 
     /**
@@ -47,7 +50,7 @@ public class JF_inicioSesion extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridLayout(1, 0));
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel1.setBackground(new java.awt.Color(49, 61, 61));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btn_inicioSesion.setText("INICIAR SESION");
@@ -79,9 +82,8 @@ public class JF_inicioSesion extends javax.swing.JFrame {
                 btn_salirActionPerformed(evt);
             }
         });
-        jPanel1.add(btn_salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, -1, -1));
+        jPanel1.add(btn_salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 300, -1, -1));
 
-        jtf_user.setText("USERNAME");
         jtf_user.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jtf_userFocusGained(evt);
@@ -122,7 +124,6 @@ public class JF_inicioSesion extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/hotel-dummy.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 310, 200));
 
-        jpf_pass.setText("********");
         jpf_pass.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jpf_passFocusGained(evt);
