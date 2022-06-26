@@ -43,7 +43,7 @@ public class JF_menu extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jtf_numero = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        btn_busca = new javax.swing.JButton();
+        btn_buscar = new javax.swing.JButton();
         btn_eliminar = new javax.swing.JButton();
         PAGINA2 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -121,15 +121,15 @@ public class JF_menu extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel10.setText("Numero telefonico:");
 
-        btn_busca.setText("Buscar");
-        btn_busca.addMouseListener(new java.awt.event.MouseAdapter() {
+        btn_buscar.setText("Buscar");
+        btn_buscar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btn_buscaMouseClicked(evt);
+                btn_buscarMouseClicked(evt);
             }
         });
-        btn_busca.addActionListener(new java.awt.event.ActionListener() {
+        btn_buscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_buscaActionPerformed(evt);
+                btn_buscarActionPerformed(evt);
             }
         });
 
@@ -162,7 +162,7 @@ public class JF_menu extends javax.swing.JFrame {
                             .addComponent(jtf_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(112, 112, 112)
-                        .addComponent(btn_busca, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(137, 137, 137)
                         .addComponent(btn_eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -183,7 +183,7 @@ public class JF_menu extends javax.swing.JFrame {
                     .addComponent(jtf_numero, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_busca, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -542,13 +542,13 @@ public class JF_menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtf_NombreActionPerformed
 
-    private void btn_buscaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_buscaMouseClicked
+    private void btn_buscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_buscarMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_buscaMouseClicked
+    }//GEN-LAST:event_btn_buscarMouseClicked
 
-    private void btn_buscaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscaActionPerformed
+    private void btn_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buscarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_buscaActionPerformed
+    }//GEN-LAST:event_btn_buscarActionPerformed
 
     private void btn_eliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_eliminarMouseClicked
         // TODO add your handling code here:
@@ -603,7 +603,7 @@ public class JF_menu extends javax.swing.JFrame {
     public static javax.swing.JButton bth_EditarVeditar;
     public static javax.swing.JButton bth_LimpiarVeditar;
     public static javax.swing.JButton btn_agregar;
-    public static javax.swing.JButton btn_busca;
+    public static javax.swing.JButton btn_buscar;
     private javax.swing.JMenu btn_cerrarSesion;
     public static javax.swing.JButton btn_eliminar;
     public static javax.swing.JButton btn_limpiar;
