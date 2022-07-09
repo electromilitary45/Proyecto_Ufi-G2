@@ -64,7 +64,6 @@ public class JF_menu extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jtf_numPersona = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<String>();
         PAGINA3 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         bth_LimpiarVeditar = new javax.swing.JButton();
@@ -93,6 +92,7 @@ public class JF_menu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         CONTENEDOR.setBackground(new java.awt.Color(204, 204, 204));
+        CONTENEDOR.setForeground(new java.awt.Color(0, 0, 0));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 204));
 
@@ -116,9 +116,11 @@ public class JF_menu extends javax.swing.JFrame {
         });
 
         jLabel9.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Nombre de la persona:");
 
         jLabel10.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Numero telefonico:");
 
         btn_buscar.setText("Buscar");
@@ -216,6 +218,7 @@ public class JF_menu extends javax.swing.JFrame {
         jPanel2.add(jtf_correoPersona, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 270, 40));
 
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Nombre de la persona:");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
 
@@ -227,10 +230,12 @@ public class JF_menu extends javax.swing.JFrame {
         jPanel2.add(jtf_nombrePersona, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 270, 40));
 
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Correo de la persona:");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Fecha de entrada:");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
 
@@ -272,6 +277,7 @@ public class JF_menu extends javax.swing.JFrame {
         jPanel2.add(jtf_fechaSal, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 270, 40));
 
         jLabel5.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Fecha Salida:");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
 
@@ -283,10 +289,12 @@ public class JF_menu extends javax.swing.JFrame {
         jPanel2.add(jtf_idPers, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 270, 40));
 
         jLabel6.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Cedula de persona:");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Numero telefonico Persona:");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, -1, -1));
 
@@ -296,9 +304,6 @@ public class JF_menu extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jtf_numPersona, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, 270, 40));
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<String>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, 270, 40));
 
         javax.swing.GroupLayout PAGINA2Layout = new javax.swing.GroupLayout(PAGINA2);
         PAGINA2.setLayout(PAGINA2Layout);
@@ -387,7 +392,7 @@ public class JF_menu extends javax.swing.JFrame {
                                     .addComponent(bth_LimpiarVeditar, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(bth_BuscarVeditar, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(bth_EditarVeditar, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(23, Short.MAX_VALUE))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -449,6 +454,8 @@ public class JF_menu extends javax.swing.JFrame {
         );
 
         CONTENEDOR.addTab("Editar", PAGINA3);
+
+        jMenuBar1.setForeground(new java.awt.Color(255, 255, 255));
 
         btn_salir.setText("SALIR");
         btn_salir.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -609,7 +616,6 @@ public class JF_menu extends javax.swing.JFrame {
     public static javax.swing.JButton btn_limpiar;
     private javax.swing.JMenu btn_salir;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel13;
