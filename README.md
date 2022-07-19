@@ -6,9 +6,8 @@
 <h3>Estudiantes: </h3>
 <li>🐶 Derek Sebastian Leiva Villalobos</li>
 <li>🦊 Anthony Navarro Gutierrez</li>
-<li>🐼 Gabriel Marin Gamboa</li>
 <li>🦄 Nicole Madrigal Vargas</li>
-<li>🐻 Matias Cornejo Olivares</li>
+
 
 <h1></h1>
 
