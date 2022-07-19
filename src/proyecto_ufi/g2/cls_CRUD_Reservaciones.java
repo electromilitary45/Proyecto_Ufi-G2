@@ -91,8 +91,6 @@ public class cls_CRUD_Reservaciones {
     }//fin modificarReservacion
     
     public void eliminarReservacion(){
-        int eliminar=0;
-        eliminar=clsF.numeros("Cual registro desea Eliminar?");
-        reservacion[eliminar]=null;
+        
     }//fin elimarReservacion
 }
