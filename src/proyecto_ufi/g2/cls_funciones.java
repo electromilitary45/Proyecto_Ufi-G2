@@ -12,9 +12,22 @@ import javax.swing.JOptionPane;
  */
 public class cls_funciones {
     
-    public int numero(String dato){
-        String cadena = dato;
-        int num= Integer.parseInt(cadena);
+    //----Inicio Cadena 
+    public String cadena(String dato){
+        String cad = JOptionPane.showInputDialog(dato);
+        return cad;
+    }//fin cadena 
+    
+    //----Inicio Char
+    public char caracter(String dato){
+        String carac = JOptionPane.showInputDialog(dato);
+        char caracter = carac.charAt(0);
+        return caracter;
+    }
+    
+    public int numeros (String dato){
+        String cadena = JOptionPane.showInputDialog(dato);
+        int num = Integer.parseInt(cadena);
         return num;
     }
 }

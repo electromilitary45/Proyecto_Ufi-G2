@@ -17,8 +17,12 @@ public class main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        JF_inicioSesion JFIS = new JF_inicioSesion();
-        JFIS.setVisible(true);
+        
+        cls_menu clsM = new cls_menu();
+        clsM.menuPrincipal();
+        
+        //JF_inicioSesion JFIS = new JF_inicioSesion();
+        //JFIS.setVisible(true);
     }
     
 }
