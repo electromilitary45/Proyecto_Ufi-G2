@@ -15,6 +15,8 @@ public class cls_CRUD_Reservaciones {
     cls_funciones clsF = new cls_funciones();
     cls_reservacion[] reservacion = new cls_reservacion[4];
     int cont =0;
+    private Object codigo;
+    private cls_reservacion[] eliminado;
     
     public void agregarReservacion(){
         int desocupados=0;
@@ -90,7 +92,13 @@ public class cls_CRUD_Reservaciones {
         
     }//fin modificarReservacion
     
-    public void eliminarReservacion(){
-        
+    public boolean eliminarReservacion(){
+        for (cls_reservacion reservacion1 : reservacion) {
+            if (codigo.equals(reservacion1.getCodigo)) {
+                reservacion=eliminado;
+                return true;
+            }
+        }
+        return false; //No se encontró
     }//fin elimarReservacion
 }
