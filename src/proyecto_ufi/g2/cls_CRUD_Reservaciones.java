@@ -44,7 +44,7 @@ public class cls_CRUD_Reservaciones {
             idPerson=clsF.cadena("DIGITE EL NUMERO DE CEDULA DEL CLIENTE");
             idReserva=idPerson;
 
-            reservacion[cont]= new cls_reservacion(idReserva, namePerson, mailPerson, dateIn, dateOut, idPerson, numTelPerson);
+            reservacion[cont]= new cls_reservacion(idReserva, namePerson, idPerson, dateIn, dateOut, idPerson, numTelPerson);
 
             cont++;
             
@@ -93,23 +93,12 @@ public class cls_CRUD_Reservaciones {
     }//fin modificarReservacion
     
     public boolean eliminarReservacion(){
-        if(reservacion != null){
-            String idReserva =clsF.cadena("DIGITE EL CODIGO DE LA RESERVACION A ELIMINAR:");
-            for (int i = 0; i<reservacion.length ; i++) {
-                if(reservacion[i] !=null){
-                    if (idReserva.equals(reservacion[i].getCodigoReservacion())) {
-                        reservacion[i] = null; //la elimina
-                        clsF.imprimirMensaje("Reservación "+idReserva+ " eliminada");
-                        return true; //encontrada y eliminada 
-                    }
-                }
+        for (cls_reservacion reservacion1 : reservacion) {
+            if (codigo.equals(reservacion1.getCodigo)) {
+                reservacion=eliminado;
+                return true;
             }
-            clsF.imprimirMensaje("Reservación no encontrada");//No se encontró
-            return  false; 
-        }else{
-           clsF.imprimirMensaje("No hay ninguna reservacion registrada"); 
-            return false; //lista nula 
         }
-        
+        return false; //No se encontró
     }//fin elimarReservacion
 }
