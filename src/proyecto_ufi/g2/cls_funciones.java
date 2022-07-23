@@ -30,4 +30,7 @@ public class cls_funciones {
         int num = Integer.parseInt(cadena);
         return num;
     }
+    public void imprimirMensaje(String mensaje){
+        JOptionPane.showMessageDialog(null, mensaje);
+    }
 }

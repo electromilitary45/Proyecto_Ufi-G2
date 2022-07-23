@@ -13,9 +13,9 @@ public class cls_reservacion {
     //-----declaracion de variables------
     private String codigoReservacion,nombrePersona
             ,correoPersona,fechaEntrada,fechaSalida
-            ,cedulaPersona,numeroTelPersona,estado;
+            ,cedulaPersona,numeroTelPersona, estado;
     
-    Object getCodigo;
+    
 
 
     //---Creacion Constructor---
